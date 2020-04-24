@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
-
 import random
+
+app = Flask(__name__)
 
 
 def generation_terme_developpeur():
@@ -78,5 +78,5 @@ def hello_world():
     return "Hello world {}!".format(b)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
