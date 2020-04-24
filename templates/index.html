@@ -1,0 +1,28 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Maths Platform by Matthieu Darritchon</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+    <h1>Matthieu</h1>
+</nav>
+<section class="content">
+    <header>
+        <h1>Test \({{ subject }}\)</h1>
+    </header>
+    <form action="/developpement" method="post">
+        <input type="hidden" id="subject" name="subject" value={{ subject }}>
+        <div>
+            <label for="resultat">Résultat développé :</label>
+            <input type="text" id="resultat" name="student_result">
+        </div>
+
+        <div class="button">
+            <button type="submit">Envoyer la réponse</button>
+        </div>
+    </form>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</section>
